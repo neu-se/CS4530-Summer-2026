@@ -1,5 +1,5 @@
-# CS4530, Spring 2026: Fundamentals of Software Engineering
-This repository contains the source for the website for Northeastern's CS4530, Spring 2026 class. If you are looking to browse the site, you should visit it directly, at [https://neu-se.github.io/CS4530-Spring-2026/](https://neu-se.github.io/CS4530-Spring-2026/). If you are looking to edit the site, then you have come to the right place!
+# CS4530, Summer 2026: Fundamentals of Software Engineering
+This repository contains the source for the website for Northeastern's CS4530, Spring 2026 class. If you are looking to browse the site, you should visit it directly, at [https://neu-se.github.io/CS4530-Summer-2026/](https://neu-se.github.io/CS4530-Summer-2026/). If you are looking to edit the site, then you have come to the right place!
 
 ### Websites for prior versions of this class:
 * [Spring 2026](https://neu-se.github.io/CS4530-Spring-2026)
