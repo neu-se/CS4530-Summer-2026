@@ -3,51 +3,51 @@
 # Each key has a "name" attribute (rendered on the calendar), a "page" attribute (which contains a link to the lesson) and an optional "type" attribute, which is a key into the _data/config.yml "types" dictionary.
 mod1:
   name: Orientation & Requirements
-  page: /modules/1-user-stories
+  page: 
 mod2:
   name: From Requirements to Tests
-  page: /modules/2-requirements-to-tests
+  page: 
 mod2a:
   name: Requirements Analysis
-  page: /modules/2-requirements-to-tests
+  page: 
 mod2b:
   name: Test-Driven Development
-  page: /modules/2-requirements-to-tests
+  page: 
 mod3:
   name: When Have I Written Enough Tests?
-  page: /modules/3-test-adequacy
+  page: 
 mod4:
   name: Design Patterns for Web Applications
-  page: /modules/4-web-apps
+  page: 
 mod5:
   name: React Part 1 (Introduction)
-  page: /modules/5-react
+  page: 
 mod6:
   name: React Part 2 (Hooks)
-  page: /modules/6-patterns-of-react
+  page: 
 mod7:
   name: Software Processes & Agile
-  page: /modules/7-software-process
+  page: 
 mod8:
   name: Writing Maintainable Code
-  page: /modules/8-code-level-design
+  page: 
 mod9:
   name: Concurrency Patterns
-  page: /modules/9-concurrency-patterns-in-typescript
+  page: 
 mod10:
   name: Tests with Larger Scope
-  page: /modules/10-larger-tests
+  page: 
 mod11:
   name: Application Level Patterns
-  page: /modules/11-app-patterns
+  page: 
 mod12:
   name: Continuous Development
   page: 
 mod13:
-  name: Security
+  name: Principles for Cloud Deployment
   page: 
 mod14:
-  name: Principles for Cloud Deployment
+  name: Security
   page: 
 mod15:
   name: Ethics and Equity in SE
@@ -94,26 +94,26 @@ posters:
 ip1:
   name: Individual Project 1
   type: deadline
-  page: /assignments/ip1
+  page: 
 ip2:
   name: Individual Project 2 
   type: deadline
-  page: /assignments/ip2
+  page: 
 ip3:
-  name: Individual Project 3 
+  name: Individual Project 3
   type: deadline
-  page: /assignments/ip3
+  page: 
 tp1:
   name: Project Formation
   type: deadline
 tp2:
   name: Preliminary Project Plan
   type: deadline
-  page: /assignments/project-plan
+  page: 
 tp3:
   name: Revised Project Plan
   type: deadline
-  page: /assignments/revised-project-plan
+  page: 
 tp4:
   name: Project Final Deliverable
   type: deadline
@@ -122,6 +122,9 @@ tp5:
   name: Individual Reflection
   type: deadline
   page: 
+memorialsday:
+  name: Memorial Day (No class)
+  type: holiday
 veteransday:
   name: Veteran's Day (No class)
   type: holiday

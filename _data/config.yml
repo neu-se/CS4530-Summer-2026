@@ -1,39 +1,39 @@
 deadlines:
+  '2':
+    Wed`:
+      date: 2026/05/13 6:00pm EST 
+      content: ip1
+  '2':
+    Fri:
+      date: 2026/05/15 6:00pm EST 
+      content: tp1
   '3':
     Wed:
-      date: 2026/01/21 11:00am EST 
-      content: ip1
+      date: 2026/05/20 6:00pm EST
+      content: ip2
+  '3':
+    Fri:
+      date: 2026/05/22 6:00pm EST
+      content: tp2
   '4':
     Wed:
-      date: 2026/01/28 11:00am EST 
-      content: tp1
-  '5':
-    Wed:
-      date: 2026/02/04 11:00am EST
-      content: ip2
-  '6':
-    Wed:
-      date: 2026/02/11 11:00am EST
-      content: tp2
-  '7':
-    Wed:
-      date: 2026/02/18 11:00am EST
+      date: 2026/05/27 6:00pm EST
       content: ip3
-  '8':
-    Wed:
-      date: 2026/02/25 11:00am EST
+  '5':
+    Mon:
+      date: 2026/06/01 6:00pm EST
       content: tp3
-  '14':
-    Wed:
-      date: 2026/04/10 6:00pm EST
+  '7':
+    Tue:
+      date: 2026/06/16 6:00pm EST
       content: tp4
-  '16':
-    Wed:
-      date: 2026/04/20 11:00am EST
+  '7':
+    Fri:
+      date: 2026/06/19 6:00pm EST
       content: tp5
 dates:
-  firstMonday: 2026/01/05
-  numWeeks: 16
+  firstMonday: 2026/05/04
+  numWeeks: 7
 types:
   default:
     className: lesson
