@@ -29,10 +29,10 @@ mod7:
   name: Software Processes & Agile
   page: 
 mod8:
-  name: Writing Maintainable Code
+  name: Concurrency Patterns
   page: 
 mod9:
-  name: Concurrency Patterns
+  name: Writing Maintainable Code
   page: 
 mod10:
   name: Tests with Larger Scope
@@ -70,7 +70,7 @@ midtermExam:
 midtermRetro:
   name: Midterm Retrospective
 WOPDiscussPlan:
-  name: Work on project (Discuss project plan/revisions)
+  name: Work on project (Discuss Preliminary Project Plan)
 WOP:
   name: Work on project
 WOPMiniDemo:
