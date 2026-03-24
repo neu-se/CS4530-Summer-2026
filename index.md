@@ -33,7 +33,7 @@ This class will serve as an introduction to the field of software engineering, c
 - Students will design and implement a portfolio-worthy software engineering project in a small team environment that can be publicly showcased to recruiters.
 
 ### Course Delivery
-The course will be delivered in a "traditional" lecture style. Prof Wand's section will be entirely virtual, and the other sections will be entirely on-the-ground, with no virtual participation option. You must attend the section for which you have registered, and you may not partner with students in other sections for the term project.
+The course will be delivered in a "traditional" lecture style. Online section will be entirely virtual, and the other sections will be entirely on-the-ground, with no virtual participation option. You must attend the section for which you have registered, and you may not partner with students in other sections for the term project.
 
 | Section       | Instructor                                                                | Meeting Time                                 | Meeting Place      |
 |---------------|---------------------------------------------------------------------------|----------------------------------------------|--------------------|
@@ -42,7 +42,7 @@ The course will be delivered in a "traditional" lecture style. Prof Wand's secti
 ## Course Project
 The assignments and project for this class are designed to mirror the experiences of a software engineer joining a new development team:
 you will be "onboarded" to our codebase, make several individual contributions, and then form a team to propose, develop and implement new features.
-The codebase that we'll be developing on is a Fake Stack Overflow project. You will get an opportunity to work with the starter code which provides basic skeleton for the app and then additional features will be proposed and implemented by you!
+The codebase that we'll be developing on is a GameNite project. You will get an opportunity to work with the starter code which provides basic skeleton for the app and then additional features will be proposed and implemented by you!
 All implementation will take place in the TypeScript programming language, using React for the user interface.
 
 At the end of the semester, the instructors and TAs will evaluate all of the student projects, and select the best (in terms of usability, code quality, test suite quality, and overall design) to showcase on course website. 
@@ -60,6 +60,7 @@ The project will provide hands-on experience to complement the skills taught in 
   - Visual Studio Code (or similar IDE)
   - Git
   - Vitest
+  - Playwright
   - Postman
 
 Select projects from Spring 2025 are hosted [in our project showcase](https://neu-se.github.io/CS4530-Spring-2025/assignments/project-showcase).
