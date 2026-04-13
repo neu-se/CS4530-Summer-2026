@@ -1,7 +1,7 @@
 ---
 layout: page
 title: React Tutorial
-permalink: /tutorials/week1-react-basics
+permalink: /tutorials/week2-react-basics
 parent: Tutorials
 nav_order: 6
 ---
@@ -51,7 +51,7 @@ This will automatically install the required dependencies and start the developm
 
 2. Navigate to http://localhost:5173/ to see the default React page.
    - After a few seconds, a browser window opens, with our app running:
-     ![image](./assets/week1-react/start.png)
+     ![image](./assets/week2-react/start.png)
 
 ## Running the Project Manually
 
