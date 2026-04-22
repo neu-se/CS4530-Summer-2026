@@ -4,9 +4,9 @@ role: Instructor
 email: a.bhutta@northeastern.edu
 website: https://www.khoury.northeastern.edu/home/abhutta/
 photo: staff/bhutta.jpg
-section: CS4530 Sections 1, 2 & 3 
+section: CS4530 Section 1 
 office-hours: |
-    * In-Person: Thursdays 140pm-230pm, Meserve 337 (No Appointment Needed)
+    * In-Person: Thursdays 11am-1130am, Meserve 337 (No Appointment Needed)
     * or [Book an appointment with me](https://outlook.office.com/bookwithme/user/34fcfde0e578470ca0179b2a55fedd15@northeastern.edu/meetingtype/SVRwCe7HMUGxuT6WGxi68g2?anonymous&ep=mLinkFromTile) for a Virtual meeting via Zoom.
 ---
 
