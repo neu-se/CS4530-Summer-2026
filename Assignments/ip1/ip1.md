@@ -21,22 +21,13 @@ The objectives of this assignment are to:
 - Translate high-level requirements into code
 
 ## Changelog
-
- - 2026-01-07: Clarified that all changes should be made to the `main` branch.
- - 2026-01-09: Clarification in Task 3, part 2: instead of "modify the tests," say "improve existing tests and/or add new tests."
- - 2026-01-10: Correction: `AuthRecord` is defined in `server/src/models.ts`, not in `server/src/models/auth.model.ts`.
- - 2026-01-11: Changed _application tab_ to _"Network" tab (the precise name may depend on the browser)_ in the Recommendations section.
- - 2026-01-13: Added "and" to the sentence "ESLint _warnings_ do not cause CI to fail and will not automatically lead to a deduction"
- - 2026-01-13: Corrected `UserRecord` to `AuthRecord` in the sentence "Additionally, when you create a user, you’ll add an entry to `storedAuths` that maps the username to the `AuthRecord`."
- - 2026-01-14: Corrected `getUserByUser()` to `getUserByUsername()` in Part 5.
- - 2026-01-14: Replaced submission instructions from .txt file to pdf file.
- - 2026-01-18: Mentioned reference implementation, clarified that playerIndex=0 is "Player #1" on the frontend, removed mention of mutant-tester.
+ _(No changes yet.)_
 
 ## 1. Getting Started
 
 If you were registered for the class before Wednesday, May 6, you should have an email from a TA with an invitation to our organization. Be sure to check your spam/junk folder. The first step is to accept the invitation. If you cannot find the invitation, if you registered for the class late, or have any other issue that keeps you from getting started, please create a Piazza post to contact us and we will try to help.
 
-After that, accept our GitHub Classroom Invitation for [this assignment](https://classroom.github.com/a/7eYHlaH6). It will create a Github repository for you which will include the starter code for this assignment.
+After that, accept our GitHub Classroom Invitation for [this assignment](https://classroom.github.com/a/Tj3U86_N). It will create a Github repository for you which will include the starter code for this assignment.
 
 If you are new to Git, you may want to work on "Learning Basics of Git" assignment first! We expect all students to be able to use add/commit/push for their work.
 
@@ -195,37 +186,37 @@ The Actions tab on GitHub has the results of previous runs.
 
 ## 4. Implementation Tasks
 
-### Task 1: Tic-Tac-Toe
+### Task 1: Connect4
 
-You should try to start a game of Tic-Tac-Toe in the development server. 
-(Log in as two different users in two different windows.) You should observe that other games work, but Tic-Tac-Toe does not! To make Tic-Tac-Toe work on GameNite, you'll need to fill in the missing implementation in `server/src/games/ticTacToe.ts`.
+You should try to start a game of Connect4 in the development server. 
+(Log in as two different users in two different windows.) You should observe that other games work, but Connect4 does not! To make Connect4 work on GameNite, you'll need to fill in the missing implementation in `server/src/games/connect4.ts`.
 
 Places to look for guidance:
  - The type specification for a game implementation in `server/src/games/gameLogic.ts`, explains what each unimplemented function does.
- - The types of Tic-Tac-Toe in `shared/src/games/ticTacToe.ts`, explain in detail how the game is intended to work.
+ - The types of Connect4 in `shared/src/games/connect4.types.ts`, explain in detail how the game is intended to work.
  - The implementations of Nim and Guessing Game in the directory `server/src/games`, which may be a helpful basis for comparison.
 
-**[Update 2026-01-19]** A reference implementation is available at <https://gamenite.onrender.com/>, you'll need to create an account (or two) to use this reference implementation. Note that `shared/src/games/ticTacToe.ts` refers to the players by their `playerIndex`: the user that initiates the game is given index 0, and the second player has index 1. The frontend refers to these as "Player #1" and "Player #2", respectively.
+A reference implementation is available at <https://gamenite.onrender.com/>, you'll need to create an account (or two) to use this reference implementation. Note that `shared/src/games/connect4.types.ts` refers to the players by their `playerIndex`: the user that initiates the game is given index 0, and the second player has index 1. The frontend refers to these as "Player #1" and "Player #2", respectively.
 
 This task is worth 25 points: 
  - 15 points will be assigned automatically based on passing our test suite
  - 10 points will be assigned by TAs manually checking for issues with [code style]({{ site.baseurl }}{% link style.md %}). Take care to document any helper functions you include.
 
-### Task 2: Tests for Tic-Tac-Toe
+### Task 2: Tests for Connect4
 
 The purpose of this part of the assignment is to get used to writing Vitest tests. *(Copilot-esque LLM autocompletion is quite good at writing tests, and you'll have a chance to try this out later in the class. If you have Copilot-style autocompletion enabled, you are violating the course's academic integrity policy and risking a failing grade, and in addition, this task will be exceptionally pointless and boring.)*
 
-Write tests for Tic-Tac-Toe in a new file, `server/tests/games/ticTacToe.spec.ts`. Your tests should achieve full branch coverage on your own implementation of Tic Tac Toe: when you run `npm run test` in the `server` directory, Vitest should report no "Uncovered Line #s" in `src/games/ticTacToe.ts`. (You can also open the `index.html` file in the `coverage` folder that `vitest` creates when you run `npm run test`, which provides an easily readable coverage report.) There are other parts of the application that don't have full coverage, but you only need to worry about coverage of the `ticTacToe.ts` implementation.
+Write tests for Connect4 in a new file, `server/tests/games/connect4.spec.ts`. Your tests should achieve full branch coverage on your own implementation of Connect4: when you run `npm run test` in the `server` directory, Vitest should report no "Uncovered Line #s" in `src/games/connect4.ts`. (You can also open the `index.html` file in the `coverage` folder that `vitest` creates when you run `npm run test`, which provides an easily readable coverage report.) There are other parts of the application that don't have full coverage, but you only need to worry about coverage of the `connect4.ts` implementation.
 
 Make sure to look at the tests for Nim and Guessing Game, they will provide an excellent guide.
 
 This task is worth 20 points:
  - 5 points for having tests that reasonably test each of the main functions you have implemented 
  - 5 points for following the format and style of the Nim and Guessing Game tests
- - 6 points for achieving full branch coverage for `ticTacToe.ts` (3 points for 90%+ branch coverage)
- - 4 points for your tests working against some of our custom "mutants" — your tests should not be overspecified (they should pass valid implementations of `ticTacToe.ts` that may be slightly different than your own), and they should correctly catch and fail implementations of Tic Tac Toe that have bugs.
+ - 6 points for achieving full branch coverage for `connect4.ts` (3 points for 90%+ branch coverage)
+ - 4 points for your tests working against some of our custom "mutants" — your tests should not be overspecified (they should pass valid implementations of `connect4.ts` that may be slightly different than your own), and they should correctly catch and fail implementations of Connect4 that have bugs.
 
-~~Watch out on Piazza — we will try to set up an autograder that optionally lets you test your tests against our mutants Tic Tac Toe implementations closer to the assignment deadline. We'll also allow you to test your own Tic Tac Toe implementations, and reserve the right to give bonus points to anyone who can show a valid Tic Tac Toe implementation that fails our tests.~~ **[Update 2026-01-19]** we will not be able to provide this before the deadline.
+Watch out on Piazza — we will try to set up an autograder that optionally lets you test your tests against our mutants Connect4 implementations closer to the assignment deadline. We'll also allow you to test your own Connect4 implementations, and reserve the right to give bonus points to anyone who can show a valid Connect4 implementation that fails our tests.
 
 ### Task 3: Exposing Errors in the User Service
 
