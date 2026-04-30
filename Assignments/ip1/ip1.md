@@ -29,7 +29,7 @@ If you were registered for the class before Wednesday, May 6, you should have an
 
 After that, accept our GitHub Classroom Invitation for [this assignment](https://classroom.github.com/a/Tj3U86_N). It will create a Github repository for you which will include the starter code for this assignment.
 
-If you are new to Git, you may want to work on "Learning Basics of Git" assignment first! We expect all students to be able to use add/commit/push for their work.
+If you are new to Git, you may want to work on "[Learning Basics of Git](https://classroom.github.com/a/7eYHlaH6)" assignment first! We expect all students to be able to use add/commit/push for their work.
 
 ### 1.1. Prerequisites
 
