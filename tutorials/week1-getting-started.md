@@ -6,7 +6,7 @@ parent: Tutorials
 nav_order: 1
 ---
 
-This tutorial describes the basic steps needed to set up a development environment with NodeJS, TypeScript, and VisualStudio Code.
+This tutorial describes the basic steps needed to set up a development environment with NodeJS, TypeScript, and Visual Studio Code.
 At the end of this tutorial, you should have a complete local development environment that you can use to build and test
 code for this class.
 
@@ -71,7 +71,7 @@ This tutorial assumes you’re using the Bash or Zsh shells (if you don’t know
    > Note: You can also restart your terminal by running `source ~/.bashrc` or `source ~/.zshrc` depending on your shell.
 3. Verify nvm is working by entering `command -v nvm`. If your terminal prints
    out `nvm`, it should be working. If you see `nvm: command not found` or no
-   feedback, open a new terminal and trying again or restart from step 1.
+   feedback, open a new terminal and try again or restart from step 1.
 4. Install the required version of Node.js by typing `nvm install 24`.
 5. To use this version of NodeJS, run the command `nvm use 24`.
 
@@ -96,11 +96,8 @@ This tutorial assumes you’re using the Bash or Zsh shells (if you don’t know
 
 1. Open a shell (for Linux / Mac) or windows powershell/command prompt (for Windows).
 2. Run the command `node -v`
-
 - This should print the current version of nodeJS installed (24.x.x).
-
 3. Run the command `npm -v`
-
 - This should print the current version of npm installed (v11.x.x).
 - ![image](./assets/week1-getting-started/node/verification.png)
 
