@@ -31,16 +31,15 @@ of course, build it from source.
 Due to the complexity of running different Node.js versions on the same machine, we _**very strongly**_ suggest using [nvm, the node version manager](https://github.com/nvm-sh/nvm). When language runtimes
 are in active development (like Node.js is), sometimes you end up needing to have multiple versions of Node.js installed,
 and different projects that you work on might require different versions of Node.js. These annoyances are quite rare,
-but when it happens that you need to have mutliple versions of Node.js installed, it's super handy to have your system set up already
+but when it happens that you need to have multiple versions of Node.js installed, it's super handy to have your system set up already
 so that installing multiple versions and switching between it is easy. You can use our instructions to set up nvm even if you
 have previously installed Node.js.
 
 ## Installing NodeJS with NVM for Windows
 
-Before starting the installation, make sure to kill your Visual Studio Code if you have it installed. To do that on Windows, open a command prompt(type `cmd` in the windows start bar, then select "Run as administrator") and run the command `taskkill.exe /IM code.exe`.
+Before starting the installation, make sure to kill your Visual Studio Code if you have it installed. To do that on Windows, open a command prompt (type `cmd` in the windows start bar, then select "Run as administrator") and run the command `taskkill.exe /IM code.exe`.
 
 1. Download `nvm-setup.exe` from the most recent release of [nvm-windows](https://github.com/coreybutler/nvm-windows/releases) (at time of writing this document, version was 1.2.2).
-
    - ![image](./assets/week1-getting-started/node/download-nvmw.png)
 
 2. Run the executable `nvm-setup.exe`.
@@ -54,7 +53,6 @@ Before starting the installation, make sure to kill your Visual Studio Code if y
    - ![image](./assets/week1-getting-started/node/nvmw-verification.png)
 7. Install Node.js version 24 using the command `nvm install 24`.
 8. To use this version of NodeJS, run the command `nvm use 24`.
-
    - The output will look like:
 
      `Now using node v24.12.0 (npm v11.6.2)`
@@ -76,7 +74,6 @@ This tutorial assumes you’re using the Bash or Zsh shells (if you don’t know
 5. To use this version of NodeJS, run the command `nvm use 24`.
 
    > Note: If this is your first time installing Node on your system, nvm will default to using version 24.x.x on every new terminal. You can run `nvm ls` to see the list of installed Node versions on your system.
-
    - The output will look like:
 
      `Now using node v24.12.0 (npm v11.6.2)`
@@ -96,8 +93,11 @@ This tutorial assumes you’re using the Bash or Zsh shells (if you don’t know
 
 1. Open a shell (for Linux / Mac) or windows powershell/command prompt (for Windows).
 2. Run the command `node -v`
+
 - This should print the current version of nodeJS installed (24.x.x).
+
 3. Run the command `npm -v`
+
 - This should print the current version of npm installed (v11.x.x).
 - ![image](./assets/week1-getting-started/node/verification.png)
 
@@ -214,18 +214,15 @@ Typescript is a superscript of JavaScript which adds type information and other 
    ```
 
 4. Open the terminal with ctrl + `~` or ctrl + '`' (ctrl-backtick)
-
    - Ensure that you are in the same directory as `hello-world.ts`.
 
 5. Run the command `node hello-world.ts`.
-
    - This will give the result below.
    - ![image](./assets/week1-getting-started/ts/run1.png)
 
 6. Modify your file to produce a type error by trying to write a `number` to the variable `message` that has type `string`:
-
    - observe the message that you get.
-   - ![image](./assets/week1-getting-started/ts/run1.png)
+   - ![image](./assets/week1-getting-started/ts/run2.png)
 
 7. Run the command `node hello-world.ts`. What happens?
 
