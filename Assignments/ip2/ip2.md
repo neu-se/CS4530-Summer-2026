@@ -17,13 +17,6 @@ The objectives of this assignment are to:
 
 ## Changelog
 
-- 2026-01-22: Correction to submission instructions, only the URL of your GitHub repository is needed.
-- 2026-01-26: Corrections: there's no "(Display name) left chat" message, and there are only two things to change in Task 3, not three.
-- 2026-01-27: Correction: the upper-right corner of a 5x7 grid was described previously as `[6,0]`, and is now described correctly as `[0,6]`.
-- 2026-01-28: Correction: in task 2, "view your own profile and editing other people's profiles" was exactly backwards. You edit your own profile and view other people's profiles.
-- 2026-01-31: Clarification to task 5: added the text "and the code you authored in Task 4." You are expected to only change code you wrote in Task 4, but if you added additional files in Task 4, you can certainly modify them in Task 5.
-- 2026-02-03: Clarification to task 5: 4 of the 8 points will be assigned based on **us** testing your implementation. You're not required to write tests for your React code for this assignment.
-
 ## 1. Getting Started
 
 Start by accepting our GitHub Classroom Invitation. It will create a Github repository for you which will include the starter code for this assignment. Run `npm install` in the root directory to fetch all dependencies for the `client`, `server`, and `shared` folders.
@@ -91,7 +84,7 @@ The application should work as before, but any changes you make in the applicati
 2. Frequently add and commit changes with git. This saves your changes and makes it easy to go back to a state where most tasks were complete. The first three tasks are cumulative, as are the last three tasks, and if you run into trouble with Task 5, you will want to be able to backtrack to a working implementation of Task 4.
 3. Do not wait until the last minute to run `npm run lint` and `npm run check` to check for linter and typescript errors!
 4. Follow the [debugging policy]({{ site.baseurl }}{% link debugging.md %}) to help in the debugging process.
-5. Task 6 is more challenging than the other tasks, but is only worth 20% of credit. Don't wait until the last minute to attempt this task if you intend to complete all parts of the assignment.
+5. Task 5 is more challenging than the other tasks, but is only worth 24% of credit. Don't wait until the last minute to attempt this task if you intend to complete all parts of the assignment.
 
 ## 3. Project Submission
 
@@ -171,104 +164,67 @@ This task is worth 15 points:
 - 1 point for each of the 2 changes in each of the 5 places where display names occur.
 - 5 points for style and organizing your code in a way that minimizes duplication.
 
-### Task 4: Mine Finder
+### Task 4: Checkers
 
-The backend has been implemented for Mine Finder, a game with a strong but legally-permissible resemblance to Microsoft's [Minesweeper](https://apps.microsoft.com/detail/9wzdncrfhwcn?hl=en-US&gl=US) game.
+The backend has been fully implemented for Checkers, a two-player strategy board game.
 
-![image]({{site.baseurl}}{% link /Assignments/ip2/beforeafter.png %})
+In this version of Checkers, the rules are as follows:
 
-(You do **not** need to use CSS to match the exact style shown here, you just need show a grid that allows the game to be played or watched successfully. The only required CSS properties are described in the conditions of satisfaction below.)
+- The board is 8×8. Red pieces (player 1) start on rows 5–7; black pieces (player 2) start on rows 0–2. Pieces only occupy dark squares (squares where row + col is odd).
+- Every piece can move one square in **any** of the four diagonal directions.
+- A piece can **capture** an enemy piece that is diagonally adjacent by jumping over it to the empty square on the other side.
+- Captures are **mandatory**: if any capture is available, the player must capture.
+- The player with no legal moves loses.
 
-In Mine Finder, your game starts with a 6x6 or 5x7 grid containing five randomly-placed mines. Clicking on a grid position sweeps it, revealing how many of the eight adjacent grid positions contain mines — or exploding and ending the game if there is a mine in that grid position! When a grid position is revealed to have zero mines, all eight adjacent grid positions are automatically swept.
+The backend logic for Checkers is implemented — you can read the type descriptions in `shared/src/games/checkers.types.ts`, the implementation in `server/src/games/checkers.ts`, and the tests in `server/src/games/checkers.spec.ts`. The frontend implementation in `client/src/games/CheckersGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
 
-The backend logic for Mine Finder is implemented, and you can read the description of types in `shared/src/games/minefinder.types.ts`, the implementation in `server/src/games/minefinder.ts`, and the tests in `server/tests/games/minefinder.spec.ts`. The frontend implementation in `client/src/games/MineFinderGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
+The task is worth **26 points**, two points for each of the following conditions of satisfaction:
 
-The task is worth 22 points, two points for meeting each of the following conditions of satisfaction:
+1. The game board is displayed as an 8×8 grid of squares. Dark squares (where `(row + col) % 2 === 1`) should have a visibly different background color from light squares.
+2. Red pieces are displayed on their squares in a visually distinct way (e.g., a red circle). Black pieces are displayed distinctly (e.g., a dark circle). Empty squares show nothing.
+3. The current player's name (or "your turn" if it is the viewer's turn) is shown somewhere near the board.
+4. Non-players (watchers) always see all squares with `cursor: default`. Clicking anywhere on the board never sends a move.
+5. If it is the current player's turn and the game is not over, their pieces should have `cursor: pointer`. Clicking on a piece that has no legal moves should have no effect.
+6. Clicking on one of the current player's pieces that has legal moves should **select** it — the selected piece should be visually highlighted.
+7. After selecting a piece, the squares it can legally move to should be visually highlighted (e.g., a different background color).
+8. Clicking a highlighted destination square should submit the correct move to the server. The move format is `{ squares: [[fromRow, fromCol], [toRow, toCol]] }`.
+9. After submitting a move, the selection should be cleared.
+10. If the game is over, all squares should have `cursor: default` and clicking anywhere should not send a move.
+11. If the game is over, a message should be shown indicating who won (e.g., "Red wins!" or "Black wins!" for watchers, "You won!" or "You lost!" for the player).
+12. Clicking on a piece that belongs to the opponent, or on a non-highlighted dark square, should deselect the current selection (if any).
+13. Kings are introduced in Task 5. You do not need to handle `"RK"` or `"BK"` entries in this task.
 
-1.  Unswept grid positions should contain a question mark `❓`, unless the game has been won (`view.state === 'won'`), in which case they should contain a `🎉` emoji. (Mines are not revealed on loss.)
-2.  Swept grid positions with no neighboring mines should appear empty.
-3.  Swept grid positions with neighboring mines should contain the number of neighboring mines (unless the grid position itself contains a mine).
-4.  Swept grid positions revealing a mine should contain a `💥` emoji.
-5.  Swept grid positions should have the `cursor: default` CSS property set.
-6.  Non-players should always see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
-7.  If the game is not over (`view.state === 'playing'`), the player of the game should see **unswept** grid positions with the `cursor: pointer` CSS property set.
-8.  If the game is not over, the player of the game should be able to "sweep" a grid position by clicking on it: clicking on the upper-right grid position of a 5x7 grid should submit the game move `[0,6]` (moves are described by row first, column second).
-9.  If the game is over (`view.state !== 'playing'`), the player of the game should see all grid positions with the `cursor: default` CSS property set, and clicking anywhere on the grid should never send a message or make a move.
-10. If the game is over, the player of the game should see the message "You won" or "You lost", as appropriate, below the game grid.
-11. If the game is over, non-players should see "(DisplayName) won" or "(DisplayName) lost", as appropriate, below the game grid, where "(DisplayName)" is replaced by the player's display name. The display name need not link to the player's profile.
+Your implementation does not need to match any particular visual style. It must be possible for a TA to effectively test each condition of satisfaction.
 
-Your implementation does not need to look like the example image above. It must be possible for a TA to effectively test a conditions of satisfaction in order to award points.
+### Task 5: Kings and Multi-Captures
 
-### Task 5: Marking Mines
+In this task you will extend the Checkers game to support **kings** and **multi-capture chains**. This requires changes across `shared/src/games/checkers.types.ts`, `server/src/games/checkers.ts`, `server/src/games/checkers.spec.ts`, and `client/src/games/CheckersGame.tsx`.
 
-For this task, you will **not** change the Mine Finder logic on the server or anything else outside of `MineFinderGame.tsx` and the code you authored in Task 4; the goal is to use React state to implement a feature.
+The new rules are:
 
-It's very helpful to be able to flag a grid position as a known mine while playing Mine Finder. Without giving the backend any support for flagging grid positions, you can use React state to record and add flags. Storing flags in React state attached to the `MineFinder` React component has some drawbacks: only the player can see flags, and if a player navigates away and returns, all their flags will be gone. That is fine for the purposes of this task.
+**Kings:** When a piece reaches the opposite back rank (row 0 for red, row 7 for black), it becomes a king. In `checkers.types.ts`, kings are represented as `"RK"` (red king) and `"BK"` (black king) in the `CheckersEntry` type. Kings move identically to regular pieces in this version of the game — all four diagonal directions were already allowed.
 
-When a player _right_-clicks on a grid position with a `❓` in it, that question mark should be replaced with a flag `⛳`. Left-clicking a flagged grid position should have no effect — a flag should keep you from accidentally setting off a mine. Right-clicking a grid position with a flag should unflag the grid position, returning it to a `❓` and making it clickable again.
+**Multi-capture chains:** After a **king** captures a piece, if another capture is available from its new position, it **must** continue capturing. A king's turn does not end until no further captures are available. Regular pieces still perform a single capture and their turn ends immediately.
 
-Winning the game should cause all remaining cells to display `🎉` regardless of whether they had previously been flagged.
+To support multi-capture chains, the move format must be extended. Instead of `{ from, to }`, moves are now represented as a **sequence of squares**: `{ squares: [[r0,c0], [r1,c1], ..., [rN,cN]] }`. A simple move has two squares (from and to); a multi-capture chain has three or more. The server's `viewAs()` method exposes `legalMoves` — each legal move is the complete sequence of squares the piece visits. Your frontend should use these sequences to submit complete moves.
 
-You can capture right clicks by adding an [`onContextMenu`](https://react.dev/reference/react-dom/components/common#common-props) property alongside the `onClick` handler you added in the last part. Because the default behavior of a right-click is to open a context menu, you'll need to call `preventDefault` on the event (this was demonstrated in lecture for preventing a button click from submitting a form). Here's a very simple example of using `preventDefault` with `onContextMenu`: <https://codepen.io/Ishika-Reddy/pen/XJKgWqK>.
+**Conditions of satisfaction:**
 
-This task is worth 8 points. 4 points will be assigned based on our manual testing of your implementation, and 4 points will be assigned by looking at your code and verifying that you are using React state appropriately.
+1. A piece that reaches the opposite back rank (row 0 for red, row 7 for black) is promoted to a king. The king is stored as `"RK"` or `"BK"` in the board, and is displayed differently from regular pieces (e.g., with a crown symbol `♛` or a visual indicator).
+2. The move format is extended: `CheckersMove` now has `squares: [number, number][]` instead of `from`/`to`. Update the Zod validator (`zCheckersMove`) accordingly.
+3. The server correctly validates and applies single-step moves in the new format (two squares in the sequence).
+4. After a king makes a capture, if another capture is available, the server generates legal moves that are multi-step sequences for that king. The king must keep capturing until no further captures are available.
+5. Regular pieces (non-kings) are still limited to a single capture per turn, even if a second capture would be geometrically possible.
+6. The server correctly removes all captured pieces along a multi-capture chain.
+7. The frontend correctly submits the full move sequence for a multi-capture chain. When the `legalMoves` view contains a sequence longer than two squares, the frontend submits the full sequence.
+8. The existing tests in `checkers.spec.ts` pass with the updated move format. New tests are added that achieve ≥95% line and branch coverage of `server/src/games/checkers.ts`, covering king promotion, single captures in the new format, and multi-capture chains.
 
-### Task 6: Mine Difficulty
+This task is worth **24 points**:
 
-GameNite's user researchers come to you with two different user stories they discovered when testing the new game:
-
-> As a novice mine finder, I want access to easier and more forgiving puzzles, so that I can develop my skills without getting discouraged.
-
-> As an expert mine finder, I want access to more challenging puzzles, so that I can show off my advanced logical skills.
-
-In this task, you'll meet the needs of these users by modifying the Mine Finder game to allow for an initial difficulty selection. This task will require substantial changes to all the parts of your project: the server, the client, the shared code and Zod validation logic for moves, and the tests.
-
-When a new single-player game of Mine Finder begins, the user should be shown a [drop down menu](https://react.dev/reference/react-dom/components/select) with three choices, "Easy", "Standard", and "Hard", and the "Standard" button should be selected by default. There should be a submit button that sends a move that is just the string "easy", "standard", or "hard". Sending that move should trigger the backend's Mine Finder logic to generate a board and start a game.
-
-You can decide what "easy" and "difficult" actually mean, within reason and the following constraints:
-
-- An "Easy" difficulty game must have no more than 36 positions arranged in a rectangular grid, and at most 5 mines. Exposing _one_ mine in an "easy" game shouldn't be an automatic loss: players only lose when two mines are exposed.
-- The "Standard" difficulty game should work like the version of the game you implemented in the previous tasks: a randomly chosen 6x6 or 5x7 grid with 5 mines.
-- A "Hard" difficulty game must have at least 40 grid positions arranged in a rectangular grid, and more than 1/6 of the positions should be mines.
-
-While playing, the difficulty level should be visible somewhere for both the player and for spectators.
-
-**Hint:** you will likely want to transform both the `MineFinderState` and `MineFinderView` types so that the game can exist in different states: not started, and started. In the starter code, `MineFinderState` looks like this:
-
-```typescript
-export interface MineFinderState {
-  width: number;
-  height: number;
-  board: boolean[][]; // each array is one row
-  clicked: boolean[][]; // each array is one row
-}
-```
-
-However, in the modified game, it will no longer be possible for the `start()` function to initialize a board: `start()` gets called before difficulty is selected, and `width` and `height` are dependent on the difficulty level.
-
-Therefore, the new state should be some sort of a [discriminated union](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html#discriminated-unions), perhaps something like this:
-
-```typescript
-export type MineFinderState =
-  | { state: "waiting" }
-  | {
-      state: "started";
-      width: number;
-      height: number;
-      board: boolean[][]; // each array is one row
-      clicked: boolean[][]; // each array is one row
-    };
-```
-
-You are not required to use precisely this type; part of the task is figuring out what your `MineFinderState` type needs to be. Part of the challenge of this assignment is developing reasonable solutions to behaviors we haven't specified: for example, what do you think spectators should see while the player is choosing a difficulty? This should be reasonable and not obviously broken, but the details are up to you.
-
-This task is worth 20 points:
-
-- 4 points for implementing difficulty selection
-- 4 points for implementing hard mode
-- 4 points for implementing easy mode (ironically, because you are allowed to explode one mine and still win the game, easy mode is harder to implement than hard mode)
-- 4 points for fixing existing tests and having >=95% line and branch coverage for `shared/src/games/minefinder.ts`, adding new tests as appropriate
-- 4 points for [code style]({{ site.baseurl }}{% link style.md %}) and appropriate documentation of helper functions.
+- 4 points for king promotion (conditions 1–2)
+- 8 points for multi-capture server logic (conditions 3–6)
+- 5 points for frontend support (condition 7)
+- 7 points for tests (condition 8)
 
 ## 5. Grading Summary
 
@@ -277,6 +233,5 @@ The assignment as a whole is worth 100 points.
 - Task 1: 10 points
 - Task 2: 25 points
 - Task 3: 15 points
-- Task 4: 22 points
-- Task 5: 8 points
-- Task 6: 20 points
+- Task 4: 26 points
+- Task 5: 24 points
