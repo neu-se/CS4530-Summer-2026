@@ -109,7 +109,7 @@ let g: 100n = 100n
 ```
 
 *   _Usage_: 
-It lets you work with large integers without running into rounding errors. While the number type can only represent whole numbers, BigInt can hold numbers larger than 2<sup>53</sup> – 1. 
+It lets you work with large integers without running into rounding errors. While the number type looses precision for values greater than 2<sup>53</sup> – 1, Bigint can represent values beyond that limit accurately. 
 
 ### String
 
@@ -134,21 +134,25 @@ Syntax:
 string.charAt(index)
 ```
 **slice()** : This method extracts a section of a string and returns a new string. 
+
 Syntax:
 ```ts 
 string.slice( beginSlice [, endSlice])
 ```
 **split()** : This method splits a String object into an array of strings by separating the string into substrings. 
+
 Syntax: 
 ```ts 
 string.split([separator][, limit])
 ```
 **concat()**: This method adds two or more strings and returns a new single string. 
+
 Syntax: 
 ```ts 
 string.concat(string2, string3[, ..., stringN])
 ```
 **indexOf()**: This method returns the index within the calling String object of the first occurrence of the specified value, starting the search at index or -1 if the value is not found. 
+
 Syntax: 
 ```ts 
 string.indexOf(searchValue[, fromIndex])
@@ -513,7 +517,7 @@ array.reduce(callback[,initalValue])
 ``` 
 callback - this parameter is the function to execute on each value in the array.
 
-intitalValue - this parameter is the object to use as the first argument of the first call of the callback.
+initialValue - this parameter is the object to use as the first argument of the first call of the callback.
  
 Examples
 ```ts 

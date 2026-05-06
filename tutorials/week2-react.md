@@ -386,7 +386,7 @@ For example, the HTML
 is slightly different in React:
 
 ```html
-<button onClick="{incrementCounter}">Increment Counter</button>
+<button onClick={incrementCounter}>Increment Counter</button>
 ```
 
 - React provides an equivalent of each event that you might be familiar with from
@@ -674,7 +674,7 @@ function Counter() {
 
   return (
     <div>
-      <h1>Count: {count}</h1>
+      <h1>Count: {counter.count}</h1>
       <button onClick={incrementCount}>Click me!</button>
     </div>
   );
