@@ -21,7 +21,7 @@ The objectives of this assignment are to:
 - Translate high-level requirements into code
 
 ## Changelog
- _(No changes yet.)_
+ - 2026-05-07: Added `AuthRecord to` `server/src/models.ts`, declared, added `storedAuths` to `server/src/services/user.service.ts`.
 
 ## 1. Getting Started
 
