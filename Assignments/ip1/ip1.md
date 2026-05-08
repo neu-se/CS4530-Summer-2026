@@ -21,7 +21,7 @@ The objectives of this assignment are to:
 - Translate high-level requirements into code
 
 ## Changelog
- - 2026-05-07: Added `AuthRecord to` `server/src/models.ts`, declared, added `storedAuths` to `server/src/services/user.service.ts`.
+ - 2026-05-07: Added `AuthRecord` to `server/src/models.ts` and `storedAuths` to `server/src/services/user.service.ts`. Merge the `GitHub Classroom: Sync Assignment` PR into your repository before working on Task 4.
 
 ## 1. Getting Started
 
