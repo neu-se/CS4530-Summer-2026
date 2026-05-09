@@ -133,6 +133,8 @@ Currently, going to the "Profile" link at the top of your page takes you to the 
 
 This task is worth 10 points, based on checking that chat navigation works as expected.
 
+---
+
 ### Task 2: Viewing Other Profiles
 
 Change `client/src/pages/Profile.tsx` so that, if you are logged in as `user0` and navigate to `/profile/user1`, you see a page that allows you to see _but not edit_ that user’s username, display name, and when their account was created.
@@ -143,6 +145,8 @@ This task is worth 25 points:
 
 - 10 points will be based on functionality.
 - 15 points will be based on appropriately refactoring your code into multiple files with appropriate [code style]({{ site.baseurl }}{% link style.md %}).
+
+---
 
 ### Task 3: More Profile Navigation
 
@@ -163,6 +167,8 @@ This task is worth 15 points:
 
 - 1 point for each of the 2 changes in each of the 5 places where display names occur.
 - 5 points for style and organizing your code in a way that minimizes duplication.
+
+---
 
 ### Task 4: Checkers
 
