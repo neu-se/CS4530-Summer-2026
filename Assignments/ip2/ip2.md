@@ -187,7 +187,7 @@ The task is worth **26 points**, two points for each of the following conditions
 5. If it is the current player's turn and the game is not over, their pieces should have `cursor: pointer`. Clicking on a piece that has no legal moves should have no effect.
 6. Clicking on one of the current player's pieces that has legal moves should **select** it — the selected piece should be visually highlighted.
 7. After selecting a piece, the squares it can legally move to should be visually highlighted (e.g., a different background color).
-8. Clicking a highlighted destination square should submit the correct move to the server. The move format is `{ squares: [[fromRow, fromCol], [toRow, toCol]] }`.
+8. Clicking a highlighted destination square should submit the correct move to the server. The move format is `{ from: [fromRow, fromCol], to: [toRow, toCol] }`.
 9. After submitting a move, the selection should be cleared.
 10. If the game is over, all squares should have `cursor: default` and clicking anywhere should not send a move.
 11. If the game is over, a message should be shown indicating who won (e.g., "Red wins!" or "Black wins!" for watchers, "You won!" or "You lost!" for the player).
@@ -196,35 +196,51 @@ The task is worth **26 points**, two points for each of the following conditions
 
 Your implementation does not need to match any particular visual style. It must be possible for a TA to effectively test each condition of satisfaction.
 
+---
+
 ### Task 5: Kings and Multi-Captures
 
-In this task you will extend the Checkers game to support **kings** and **multi-capture chains**. This requires changes across `shared/src/games/checkers.types.ts`, `server/src/games/checkers.ts`, `server/src/games/checkers.spec.ts`, and `client/src/games/CheckersGame.tsx`.
-
+In this task you will extend the Checkers game to support **kings** and **multi-capture chains**, and restrict regular pieces to **forward-only movement**. This requires changes across `shared/src/games/checkers.types.ts`, `server/src/games/checkers.ts`, `server/src/games/checkers.spec.ts`, and `client/src/games/CheckersGame.tsx`.
 The new rules are:
 
-**Kings:** When a piece reaches the opposite back rank (row 0 for red, row 7 for black), it becomes a king. In `checkers.types.ts`, kings are represented as `"RK"` (red king) and `"BK"` (black king) in the `CheckersEntry` type. Kings move identically to regular pieces in this version of the game — all four diagonal directions were already allowed.
+**Movement changes:**
 
-**Multi-capture chains:** After a **king** captures a piece, if another capture is available from its new position, it **must** continue capturing. A king's turn does not end until no further captures are available. Regular pieces still perform a single capture and their turn ends immediately.
+In the starter code, all pieces can move in any of the four diagonal directions. In Task 5 you will change this:
+
+- **Regular pieces** may only move **forward**: red pieces move upward (decreasing row), black pieces move downward (increasing row).
+- **Kings** may move in **all four diagonal directions**, including backwards.
+
+**Kings:**
+
+When a piece reaches the opposite back rank — row 0 for red, row 7 for black — it becomes a king. Kings are represented as `"RK"` (red king) and `"BK"` (black king) in the `CheckersEntry` type.
+
+**Multi-capture chains:**
+
+After a **king** captures a piece, if another capture is available from its new position, it **must** continue capturing. A king's turn does not end until no further captures are available. Regular pieces still perform a single capture and their turn ends immediately.
+
+**Move format:**
 
 To support multi-capture chains, the move format must be extended. Instead of `{ from, to }`, moves are now represented as a **sequence of squares**: `{ squares: [[r0,c0], [r1,c1], ..., [rN,cN]] }`. A simple move has two squares (from and to); a multi-capture chain has three or more. The server's `viewAs()` method exposes `legalMoves` — each legal move is the complete sequence of squares the piece visits. Your frontend should use these sequences to submit complete moves.
 
 **Conditions of satisfaction:**
 
-1. A piece that reaches the opposite back rank (row 0 for red, row 7 for black) is promoted to a king. The king is stored as `"RK"` or `"BK"` in the board, and is displayed differently from regular pieces (e.g., with a crown symbol `♛` or a visual indicator).
+1. A piece that reaches the opposite back rank is promoted to a king (`"RK"` or `"BK"`). Kings are displayed differently from regular pieces (e.g., with a crown symbol `♛` or a visual indicator).
 2. The move format is extended: `CheckersMove` now has `squares: [number, number][]` instead of `from`/`to`. Update the Zod validator (`zCheckersMove`) accordingly.
-3. The server correctly validates and applies single-step moves in the new format (two squares in the sequence).
-4. After a king makes a capture, if another capture is available, the server generates legal moves that are multi-step sequences for that king. The king must keep capturing until no further captures are available.
-5. Regular pieces (non-kings) are still limited to a single capture per turn, even if a second capture would be geometrically possible.
-6. The server correctly removes all captured pieces along a multi-capture chain.
-7. The frontend correctly submits the full move sequence for a multi-capture chain. When the `legalMoves` view contains a sequence longer than two squares, the frontend submits the full sequence.
-8. The existing tests in `checkers.spec.ts` pass with the updated move format. New tests are added that achieve ≥95% line and branch coverage of `server/src/games/checkers.ts`, covering king promotion, single captures in the new format, and multi-capture chains.
+3. Regular pieces may only move and capture **forward**. Red pieces move toward row 0; black pieces move toward row 7. A move that goes in the wrong direction should be rejected by the server.
+4. Kings may move and capture in **all four diagonal directions**, including backwards.
+5. After a king makes a capture, if another capture is available, the server generates legal moves that are multi-step sequences for that king. The king must keep capturing until no further captures are available.
+6. Regular pieces are limited to a single capture per turn, even if a second capture would be geometrically possible.
+7. The server correctly removes all captured pieces along a multi-capture chain.
+8. The frontend correctly submits the full move sequence for a multi-capture chain. When the `legalMoves` view contains a sequence longer than two squares, the frontend submits the full sequence.
+9. The existing tests in `checkers.spec.ts` pass with the updated move format. New tests are added that achieve ≥95% line and branch coverage of `server/src/games/checkers.ts`, covering king promotion, forward-only movement for regular pieces, king movement in all four directions, and multi-capture chains.
 
 This task is worth **24 points**:
 
-- 4 points for king promotion (conditions 1–2)
-- 8 points for multi-capture server logic (conditions 3–6)
-- 5 points for frontend support (condition 7)
-- 7 points for tests (condition 8)
+- 6 points for king promotion and forward-only restriction (conditions 1–3)
+- 8 points for king movement and multi-capture server logic (conditions 4–7)
+- 4 points for frontend support (condition 8)
+- 4 points for tests (condition 9 — ≥95% coverage with new tests)
+- 2 points for code style and appropriate documentation
 
 ## 5. Grading Summary
 
