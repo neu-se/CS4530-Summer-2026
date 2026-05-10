@@ -238,7 +238,7 @@ To support multi-capture chains, the move format must be extended. Instead of `{
 6. Regular pieces are limited to a single capture per turn, even if a second capture would be geometrically possible.
 7. The server correctly removes all captured pieces along a multi-capture chain.
 8. The frontend correctly submits the full move sequence for a multi-capture chain. When the `legalMoves` view contains a sequence longer than two squares, the frontend submits the full sequence.
-9. The existing tests in `checkers.spec.ts` pass with the updated move format. New tests are added that achieve ≥95% line and branch coverage of `server/src/games/checkers.ts`, covering king promotion, forward-only movement for regular pieces, king movement in all four directions, and multi-capture chains.
+9. The existing tests in `checkers.spec.ts` are updated to reflect the new rules and pass. This includes updating any existing tests that no longer hold for example, the test that verifies pieces can move in all four directions must be updated to reflect that regular pieces are now restricted to forward-only movement. New tests are added that achieve ≥95% line and branch coverage of `server/src/games/checkers.ts`, covering king promotion, forward-only movement for regular pieces, king movement in all four directions, and multi-capture chains.
 
 This task is worth **24 points**:
 
