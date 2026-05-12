@@ -90,7 +90,7 @@ The application should work as before, but any changes you make in the applicati
 
 You will submit your code by pushing the final version into your repository (add/commit/push). **All commits must be visible on the main branch on GitHub classroom to receive credit.** Be sure to check if the correct version is submitted before the deadline.
 
-On Gradescope, you will submit a plain `.txt` file containing a link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip2-robsimmons`).
+On Gradescope, you will submit a `.pdf` file containing a link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip2-robsimmons`).
 
 We will grade your code on GitHub by using the "Feedback" PR that is automatically created when the assignment is. The Feedback PR can be found under the "Pull requests" menu, like this:
 
