@@ -182,7 +182,7 @@ In this version of Checkers, the rules are as follows:
 - Captures are **mandatory**: if any capture is available, the player must capture.
 - The player with no legal moves loses.
 
-The backend logic for Checkers is implemented — you can read the type descriptions in `shared/src/games/checkers.types.ts`, the implementation in `server/src/games/checkers.ts`, and the tests in `server/src/games/checkers.spec.ts`. The frontend implementation in `client/src/games/CheckersGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
+The backend logic for Checkers is implemented — you can read the type descriptions in `shared/src/games/checkers.types.ts`, the implementation in `server/src/games/checkers.ts`, and the tests in `server/tests/games/checkers.spec.ts`. The frontend implementation in `client/src/games/CheckersGame.tsx` is the only part that is completely missing, and you will implement the game's frontend in React for this task.
 
 The task is worth **26 points**, two points for each of the following conditions of satisfaction:
 
@@ -206,7 +206,7 @@ Your implementation does not need to match any particular visual style. It must 
 
 ### Task 5: Kings and Multi-Captures
 
-In this task you will extend the Checkers game to support **kings** and **multi-capture chains**, and restrict regular pieces to **forward-only movement**. This requires changes across `shared/src/games/checkers.types.ts`, `server/src/games/checkers.ts`, `server/src/games/checkers.spec.ts`, and `client/src/games/CheckersGame.tsx`.
+In this task you will extend the Checkers game to support **kings** and **multi-capture chains**, and restrict regular pieces to **forward-only movement**. This requires changes across `shared/src/games/checkers.types.ts`, `server/src/games/checkers.ts`, `server/tests/games/checkers.spec.ts`, and `client/src/games/CheckersGame.tsx`.
 The new rules are:
 
 **Movement changes:**
