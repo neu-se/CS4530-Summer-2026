@@ -22,13 +22,6 @@ In keeping with the last objective, **you may use code generation (i.e. "AI") to
 - You are responsible for every line of code in your final submission. If we ask you questions about your submitted code and you are unable to explain why decisions were made because you accepted the LLM's suggestions without understanding them, **you will receive a failing grade on this assignment**.
 - The PDF you hand in on Gradescope should document which LLM tools you used, how you used them, and whether you think the experience saved you time overall. (How much time did you spend on the assignment? How much time did the use of tools cost, or save? Did you go down any blind alleys or wild-goose chases due to your use of the tools you used?) This can be brief. Do not use text-generation to generate this text; your internal process of reflection and writing is the point.
 
-## Changelog
-
-- 2026-02-08: Fixed typos in LLM discussion description.
-- 2026-02-16: Correction: replaced "new games page" with "list-of-games page" in 1.4
-- 2026-02-16: Clarification: replaced "the user first navigates" with "the user navigates"
-- 2026-02-16: Clarification: replaced "Navigating to" with "Navigating to or otherwise refreshing" in 1.9
-
 ## 1. Getting Started
 
 Start by accepting our GitHub Classroom Invitation. It will create a Github repository for you which will include the starter code for this assignment. Run `npm install` in the root directory to fetch all dependencies for the `client`, `server`, and `shared` folders.
@@ -58,10 +51,10 @@ The GitHub project contains a number of configuration files you **may not modify
 The code you submit must pass GitHub's automatic checks, which mostly just amount to the TypeScript typechecker, the ESLint linter, and the tests. You can run these yourself like this:
 
 ```
-ip1-me $> npm run prettier
-ip1-me $> npm run check
-ip1-me $> npm run lint
-ip1-me $> npm run test
+ip3-me $> npm run prettier
+ip3-me $> npm run check
+ip3-me $> npm run lint
+ip3-me $> npm run test
 ```
 
 When you push your code to GitHub, you can see the status icon for your most recent submission. It's initially a yellow circle, like this:
@@ -94,7 +87,7 @@ These essential conditions of satisfaction form the minimum viable product:
  - 1.2: A new game appearing on the home page does not cause currently-visible games to be removed. This means that new games may cause more than four games to be visible on the home page. 
  - 1.3: When a user creates a new game, any users watching the "All games" page at `/games` see the new game inserted.
  - 1.4: On both the home page and list-of-games page, new games that have been added since page load have some attention-getting designation as new games. ("New!")
- - 1.5: When the user navigates to the home page or new games page, there are no games with the attention-getting new-game decoration.
+ - 1.5: When the user navigates to the home page or all games page, there are no games with the attention-getting new-game decoration.
  
 For full credit, you should also implement these desirable conditions of satisfaction:
 
