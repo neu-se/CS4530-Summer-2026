@@ -124,7 +124,7 @@ We will examine the style and quality of your code. For full credit, make sure:
 
 (This is not intended to be an exhaustive list.)
 
-### Task 2: Reviewing Game Moves
+### Task 2: Profile Images
 
 User story: _As someone who likes reviewing game strategy, I want to be look back on the individual moves made in an ongoing or completed Game Nite game, so that I can improve my own gameplay and learn how other peoples' strategy differs._
 
