@@ -8,7 +8,7 @@ due_date: "Wednesday May 27, 2026 6:00pm (ET)"
 submission_notes: Submit through Github Classroom (Commit your work in main branch) and link on Gradescope
 ---
 
-In this third individual deliverable, you will be given some more freedom in how your features are developed and will
+In this third individual deliverable, you will be given some more freedom in how your features are developed.
 
 The objectives of this assignment are to:
 
@@ -126,31 +126,36 @@ We will examine the style and quality of your code. For full credit, make sure:
 
 ### Task 2: Profile Images
 
-User story: _As someone who likes reviewing game strategy, I want to be look back on the individual moves made in an ongoing or completed Game Nite game, so that I can improve my own gameplay and learn how other peoples' strategy differs._
+User story: _As a GameNite user, I want to set a profile image on my account so that other players can recognize me across the site._
 
-For this task, you will change your backend in order to record a history of the moves played in a game, and display the record of moves in a human-readable way in the frontend.
-
-![image]({{site.baseurl}}{% link /Assignments/ip3/movelog.png %})
+For this task, you will extend the user profile to support a profile image hosted on an external image service, and display that image in the appropriate places across the frontend.
 
 These essential conditions of satisfaction form the minimum viable product:
 
- - 2.1: When a move is made, all users watching the chat see the same description of that move in the chat log.
- - 2.2: Past descriptions of game moves appear interleaved in the chat window with chat messages and "(User) entered chat" messages.
- - 2.3: Game moves are centered and styled in a way that emphasizes them more emphasis than "(User) entered chat"  messages.
- - 2.4: Descriptions of Nim moves have the form "(User) took {one token, two tokens, three tokens}, leaving N" or "(User) took {one token, two tokens, three tokens} and lost the game", as appropriate, with (User) either being "you" or the display name of the user.
+ - 2.1: A user can enter a URL pointing to an image hosted on an external service (e.g. postimages.org) into an input field on their profile page and click a Save button to persist it. (The Save button for profile image should operate independently of the existing display-name/password form.)
+ - 2.2: After saving, the profile image is displayed on the user's profile page. (The image should be displayed at a reasonable size that does not break the page layout.)
+ - 2.3: If no profile image URL has been saved, no broken image icon or empty placeholder space is shown, the image area is omitted from the profile page entirely.
+ - 2.4: The profile image is visible to other users when they visit that user's profile page. To test this, add a clickable link on player names in the game panel that navigates to their profile page. (The profile page should display the profile of the user identified by the URL, not the logged-in user.)
+ - 2.5: A user can clear their profile image by clicking a dedicated Remove button on their profile page, which deletes the saved URL and returns their profile to the no-image state described in 2.3.
 
 For full credit, you should also implement these desirable conditions of satisfaction:
 
- - 2.5: Number Guesser also reports moves that make sense in the context of that game. (This is intentionally open-ended. You should include a more specific and testable version of this condition of satisfaction in the PDF you hand in on Gradescope.)
- - 2.6: The description of past moves gets stored in memory: it's possible to navigate away from a game page and then navigate back, and the log of all game moves will still be present.
+ - 2.6: Profile image appears next to the user's name in chat messages. If the user has no profile image set, no image or empty space appears in that location.
+ - 2.7: Profile image appears next to player names in the game panel player roster. If the user has no profile image set, no image or empty space appears in that location.
+ - 2.8: Profile image appears next to usernames in forum threads and comments. If the user has no profile image set, no image or empty space appears in that location.
+ - 2.9: Updating or clearing a profile image does not log the user out. Hint: the profile image URL does not require re-authentication when changed.
+ - 2.10: Profile images are displayed at a consistent, fixed size - chosen by the student — across all parts of the app where they appear.
+ - 2.11: If a saved URL does not resolve to a valid image, no broken image icon is shown, the app handles this gracefully by hiding the image element.
+
+Note: Image data (e.g. data URLs) must never be stored in the database, only a URL string pointing to an externally hosted image.
 
 We will examine the style and quality of your code. For full credit, make sure:
 
  - Functions are added where appropriate and given good names and informative JSDoc comments.
  - All code uses appropriate [code style]({{ site.baseurl }}{% link style.md %}).
- - The controller-service-repository pattern is respected: business logic is generally placed in the service layer, and the repository and controller don't know about each other.
- - The record types in `server/src/models.ts` give an indication of how the new data we are collecting is being stored. 
- - The production of move descriptions is treated as a part of a game's logic, and is added to the existing interface of games in a reasonable way.
+ - Excessive repetition in React is avoided by creating new hooks or new components.
+ - The user data types in `server/src/models.ts` and `shared/src/user.types.ts`, and the function that constructs user objects when sending data to the client, indicate where changes are needed.
+ - Not all existing update flows are appropriate models for new features, understand why existing hooks behave the way they do before using them as a model.
 
 (This is not intended to be an exhaustive list.)
 
