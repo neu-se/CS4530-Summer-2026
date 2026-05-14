@@ -48,7 +48,6 @@ On Gradescope, you will submit a plain `.pdf` file containing three things:
 
 1. A link to your project's GitHub repo (e.g. `https://github.com/neu-cs4530/ip3-robsimmons`) 
 2. The short reflection on your (optional) use of LLM tools, as described in the project introduction
-3. A more specifically testable version of Condition of Satisfaction 2.5, which matches your implementation
 
 Grades will be assigned on Gradescope and synced to the Canvas Gradebook.
 
