@@ -3,7 +3,7 @@ layout: page
 title: Revised Project Plan
 permalink: /assignments/revised-project-plan
 parent: Assignments
-nav_order: 5
+nav_order: 6
 ---
 
 # Revised Project Plan **Due Monday Jun 1, 6pm (ET)**{: .label .label-red }

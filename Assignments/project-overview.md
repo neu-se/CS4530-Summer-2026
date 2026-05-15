@@ -19,7 +19,7 @@ All implementation will take place in the TypeScript programming language, using
 | 05/15/2026| Team Formation Survey | Specify preferences for teammates |
 | 05/18/2026| Project Kick-off Meeting | Schedule a meeting with your Mentor TA during **this week** |
 | 05/22/2026 | [Preliminary Project Plan]({{ site.baseurl }}{% link Assignments/project-plan.md %}) | Propose a new feature for GameNite project that can be planned and implemented within 3 weeks |
-| 06/01/2026 | Revised Project Plan | Refine the scope of your feature based on staff feedback, define detailed requirements and project acceptance criteria. |
+| 06/01/2026 | [Revised Project Plan]({{ site.baseurl }}{% link Assignments/revised-project-plan.md %}) | Refine the scope of your feature based on staff feedback, define detailed requirements and project acceptance criteria. |
 | 06/16/2026 | Project Delivery - Implementation and Documentation | Deliver/Deploy your new features, including design documentation and tests |
 | 06/18/2026 | Individual Reflection | Reflect on the evolution of your project, process and team dynamics |
 
