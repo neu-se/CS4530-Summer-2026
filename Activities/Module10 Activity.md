@@ -5,7 +5,7 @@ nav_exclude: true
 ---
 
 # Testing Activity
-This is an optional activity. You are encouraged to work on it for your learning but no submission is required. There is no grade assigned to this activity.
+This is an optional activity. You are encouraged to work on it for your learning but no submission is required. **There is no grade assigned to this activity.**
 
 ## Using mocks and spies to test GameNite
 The overall code coverage for GameNite has always been kind of garbage; there's essentially no coverage of code used by websockets. The controller functions that interact with the socket.io library use dependency injection: the user-specific socket connection and server-wide socket server object are passed as arguments to the socket functions. We only needed a suitable mock `GameSocket` and `GameSocketServer` in order to test our functions. 

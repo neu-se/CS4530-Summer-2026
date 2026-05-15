@@ -5,7 +5,7 @@ nav_exclude: true
 ---
 
 # Readable Code Activity 
-This is an optional activity. You are welcome to complete it for your learning but submission is not required.
+This is an optional activity. You are welcome to complete it for your learning but submission is not required. **There is no grade assigned to this activity.**
 
 ### Getting started
 
