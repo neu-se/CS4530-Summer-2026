@@ -15,28 +15,28 @@ mod2b:
   page: 
 mod3:
   name: When Have I Written Enough Tests?
-  page: 
+  page: /modules/3-test-adequacy
 mod4:
   name: Design Patterns for Web Applications
-  page: 
+  page: /modules/4-web-apps
 mod5:
   name: React Part 1 (Introduction)
-  page: 
+  page: /modules/5-react
 mod6:
   name: React Part 2 (Hooks)
-  page: 
+  page: /modules/6-patterns-of-react
 mod7:
   name: Software Processes & Agile
-  page: 
+  page: /modules/7-software-process
 mod8:
   name: Concurrency Patterns
-  page: 
+  page: /modules/8-concurrency-patterns-in-typescript
 mod9:
   name: Writing Maintainable Code
-  page: 
+  page: /modules/9-code-level-design
 mod10:
   name: Tests with Larger Scope
-  page: 
+  page: /modules/10-larger-tests
 mod11:
   name: Application Level Patterns
   page: 
@@ -98,7 +98,7 @@ ip1:
 ip2:
   name: Individual Project 2 
   type: deadline
-  page: 
+  page: /assignments/ip2
 ip3:
   name: Individual Project 3
   type: deadline
@@ -109,7 +109,7 @@ tp1:
 tp2:
   name: Preliminary Project Plan
   type: deadline
-  page: 
+  page: /assignments/project-plan
 tp3:
   name: Revised Project Plan
   type: deadline
