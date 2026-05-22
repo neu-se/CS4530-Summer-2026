@@ -38,8 +38,8 @@ mod10:
   name: Tests with Larger Scope
   page: /modules/10-larger-tests
 mod11:
-  name: Application Level Patterns
-  page: 
+  name: Interaction & Application Level Patterns
+  page: /modules/11-patterns
 mod12:
   name: Continuous Development
   page: 
