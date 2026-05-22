@@ -3,7 +3,7 @@ layout: page
 title: Demos for Section 1
 permalink: /assignments/sec-1-demos
 parent: Final Project Grading
-nav_order: 8
+nav_order: 9
 ---
 
 # Specifications for Live Demos or Presentations (Section 1 - Prof. Bhutta)
