@@ -1,0 +1,39 @@
+---
+layout: page
+title: Demos for Section 1
+permalink: /assignments/sec-1-demos
+parent: Final Project Grading
+nav_order: 8
+---
+
+# Specifications for Live Demos or Presentations (Section 1 - Prof. Bhutta)
+Each group will present a live demo to show the feature that they have added for the final project. The schedule of these demos is provided on your section's calendars but the order of demos will be discussed/finalized during the lecture. You will have 9 minutes maximum (8 minutes to setup and present + 1 minute for questions and everything else). You will lose points if your demo goes over 8 minutes. Please rehearse it and time yourself (best to keep it to 7 minutes or less). 
+
+Please note:
+- Your demo must be from the deployed site, not from localhost. It must be a live demo, not pre-recorded 
+- Attendance is REQUIRED for these demos. Please email the instructor if you have extenuating circumstances.
+- Each group will be required to submit copy of presentation (along with poster/flyer) on Canvas.
+- Each group will also be required to grade demos of other groups and send their grades to instructor.
+
+Your presentation should include the following slides:
+- {Required Slide} Brief description of feature(s) you implemented or your user stories summarized in few words [no more than 1 slide]
+- {Required Slide} Status of all conditions of satisfaction for your user stories (summary sentence is fine or even use percentages to show what was implemented vs what was proposed is ok too). Using the table from your project plan may be helpful if a lot of work was not fully completed.
+- {Required Slide} Summary of your testing work i.e., coverages for all new features/files [no more than 1 slide].
+- {Required Slide} If you did not complete any essential or desirable features, discuss why [no more than 1 slide]
+- {Required Slide} Discuss any deviations in work/tasks/priorities (not scheduling or responsibilities) from revised plan, if any. [no more than 1 slide]
+- {Optional Slide} Discuss any challenges you faced and how did you resolve them [no more than 1 slide]
+- {Required Slide} Short summary of overall contributions made by each member [no more than 1 slide with 1-2 sentences per member]
+- {Required Slide} What percentage of overall contribution was made by each member and what are the estimated number of hours spent on the {overall} development work during the project excluding research tasks or time spent on project planning [no more than 1 slide]
+
+During your presentation, you might want to consider the following order of presentation: quick introduction of project features (i.e., user stories) followed by live demo of your app, then present the remaining slides in the order listed above or in any order you find appropriate.
+
+You might want to include your email address and other related info (i.e., clickable links for github repo and hosted site, perhaps your pictures, etc) at the end of your slides. You will also **submit** a copy of your presentation (pptx/pdf file, not link) on Canvas under "Project: Poster/Demo" assignment.
+
+# Grading Rubric:
+Your final Poster/Flyer and Demos are worth 4% of the overall course. 
+
+Poster or Flyer will be worth 1% and will be graded based on whether you submitted it on time or not. 
+
+Demos will be worth 3% and will be graded in the following manner: Each group will evaluate each others' demos and will assign scores (Instructor and TAs will do the same). Your final demo score will be calculated by combining all of these scores (equally weighted). However, you **will NOT** receive points for the demo if your group fails to submit copy of the presentation on Canvas, your scores to instructor or if you are not present for all presentations/demos during class. 
+
+Instructor will grade the individual demos using the following criteria: Quality of Overall Work (UI, Design and Implementation);Difficulty of Proposed Features; Quality of Overall Demo/Presentation (i.e., did you include all of the required info listed above? Did you finish your demo in allotted time?); Any other factor you find appropriate. 
