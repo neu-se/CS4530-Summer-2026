@@ -55,7 +55,7 @@ You will first create the MongoDB database, and then setup the continuous deploy
 3. Click on the "Create" button on the center of the screen. (If you don't see a "Create" button, make sure you are in the "Project Overview" section on the left navigation)
 4. In the configuration options:
    1. Choose the "Free" tier.
-   2. For the Name, provide a name such as "db-cs4530-spring26-XYY" (where XYY is your group number).
+   2. For the Name, provide a name such as "db-cs4530-summer26-XYY" (where XYY is your group number).
    3. Keep the Provider and Region the default values.
 5. Click on "Create Deployment".
 6. You will be prompted about connecting to your database.
