@@ -6,12 +6,10 @@ parent: Assignments
 nav_order: 7
 ---
 # Project: Final Deliverable **Due Tuesday 6/16/2026 6pm (ET)**{: .label .label-red }
-The final project deliverable is the implementation, available in github and deployed on Render.com, and the documentation turned in to Canvas. It also includes poster or flyer and demos. 
+The final project deliverable is the implementation, available in github and deployed on Render.com, and the documentation turned in to Canvas. It also includes poster or flier and demos. 
 
 ## Project Implementation and Documentation
 Your final team deliverable will be a "release" of your new feature on GitHub (with tests), and will be accompanied by a demo. You will submit the link of your hosted app on Canvas.
-
-### Contents
 
 Your final team deliverable will include:
 * The implementation of your new features, deployed to Render.com or a similar service (e.g. Railway, Heroku, etc.)
@@ -24,13 +22,13 @@ Your final team deliverable will include:
 Accompanying the final team deliverable will be an *individual reflection*, which every student must submit on their own which will include your reflections on the evolution of your project concept, on the software engineering processes you used, and on your team's dynamics and collaboration.
 
 
-### Submission Instructions
-**All filed submitted on Canvas must be renamed to include your group number in the file name.** 
+## Submission Instructions
+**All files submitted on Canvas must be renamed to include your group number in the file name.** 
 
-#### Code, documentation and Link
+### Code, documentation and Link
  All apps will be deployed on Render.com or a similar service (instructions for CI/CD pipeline setup are provided separately). After you have pushed all of your code (and documentation) to your team's GitHub repository, create [a release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) on GitHub, and apply the tag version `final-submission`. After your release is created, you'll find that there is now a `.zip` that can be downloaded from GitHub that contains a snapshot of your entire repository. Download this zip file, unpack it, and follow the instructions that you provided in your README to double-check that the course staff will be able to run your project (this step is handy to make sure that you didn't forget to include some key files in git). If needed, you can delete the release, make some changes, and re-release up until the deadline. **Rename your zip file to include your group number in the file name. Submit this zip file to Canvas** under the assignment "Project: Code Submission" along with **the link of your hosted app** (in comments or a text file). Submit your report separately to Canvas, under the assignment "Project: Report".
 
-#### Continuous Integration Pipeline
+### Continuous Integration Pipeline
 
 In your team's repo on GitHub you must have a CI workflow with the following characteristics: 
 - Runs when code is integrated to a mainline branch
@@ -41,12 +39,12 @@ In your team's repo on GitHub you must have a CI workflow with the following cha
 - Is repeatable and deterministic
 We will provide instructions for CI/CD pipeline setup separately.
 
-#### Project Plan on Issue Tracking Software
+### Project Plan on Issue Tracking Software
 
 Each team is required to use a project management tool (e.g., JIRA, Trello, notion or Github Projects) to track the list of all essential and desirable tasks. In your team's repo on GitHub you must have a link to your tasks and a status update (how much completed).  
 
-#### Project Poster/Flyer
-Each team **MUST** submit a poster or flyer. Your flyer will be a single-page 8.5x11 color PDF document, that will include the following aspects:
+### Project Poster/flier
+Each team **MUST** submit a poster or flier. Your flier will be a single-page 8.5x11 color PDF document, that will include the following aspects:
 
 * Team name
 * Team members
@@ -56,24 +54,24 @@ Each team **MUST** submit a poster or flyer. Your flyer will be a single-page 8.
 * Short “what’s next” section describing future work that could build on your project - additional features that you think could be interesting, or ideas for refactoring the code.
 * Screenshots of the feature, visually demonstrating the main functionality that you implemented.
 
-Here's an [example flier from Summer 2025]({{ site.baseurl }}{% link Examples/TeamSwanna_Flier.pdf %}) and an example [poster]({{ site.baseurl }}{% link Examples/conversation-areas-poster.pdf %}), but your poster/flier doesn't need to be this highly illustrated. Imagine it as a physical artifact you are giving to the the recruiters or investors as you present your final presentation: your goal is to demonstrate that you have some experience working on some software engineering project that is both technically non-trivial and interesting. There are no specific requirements for font size or amount of text. 
+Here's an [example flier from Summer 2025]({{ site.baseurl }}{% link Examples/TeamSwanna_flier.pdf %}) and an example [poster]({{ site.baseurl }}{% link Examples/conversation-areas-poster.pdf %}), but your poster/flier doesn't need to be this highly illustrated. Imagine it as a physical artifact you are giving to the the recruiters or investors as you present your final presentation: your goal is to demonstrate that you have some experience working on some software engineering project that is both technically non-trivial and interesting. There are no specific requirements for font size or amount of text. 
 
-**Each flier/poster must include your group number, names of team members and click-able links to your project repo and hosted app**. Create a PDF of your flier/poster and rename it to include your project name and group number. A physical flier/poster (or printed version) is not needed. **Fliers/posters will be submitted on Canvas**, under the assignment "Project: Poster / Demo".
+**Each flier/poster must include your group number, names of team members and click-able links to your project repo and hosted app**. Create a PDF of your flier/poster and rename it to include your project name and group number. A physical flier/poster (or printed version) is not needed. **fliers/posters will be submitted on Canvas**, under the assignment "Project: Poster / Demo".
 
-#### Project Demo/Presentation
-In addition to the poster/flier, some sections will have live (in-person) presentations or demos. Details for project demos or presentations will be provided separately by each instructor on the grading rubric page (and may vary from section to section). **Copies of presentations used in demos will be submitted on Canvas**, under the assignment "Project: Poster / Demo" (if required by your instructor).
+### Project Demo/Presentation
+In addition to the poster/flier, some sections will have live (in-person) presentations or demos. Details for project demos or presentations are provided separately by each instructor under the grading rubric page (and may vary from section to section). **Copies of presentations used in demos will be submitted on Canvas**, under the assignment "Project: Poster / Demo" (if required by your instructor).
 
-#### Project Showcase
+### Project Showcase
 We will create a project showcase page for this semester (similar to the one from [Spring 2026](https://neu-se.github.io/CS4530-Spring-2026/assignments/project-showcase) semester). You will be asked to indicate your preference (if you don't want your project to be posted there) by completing a survey (a link will be provided in Canvas assignment "Project: Withdraw Permission for Showcase Page"). By default all projects will be posted unless your preference says otherwise. We often direct recruiters to that page. 
  
-#### Individual Reflection
+### Individual Reflection
 Create a PDF of your reflection, and submit it to Canvas, under the assignment "Project: Individual Reflection". 
 
-#### Deadlines
+## Deadlines
 Here are the deadlines for all of the project deliverables:
 * Final Implementation (deployed site and code with all tests): Tuesday Jun 16th at 6pm ET
 * Final Report: Tuesday Jun 16th at 6pm ET
-* Poster/Flier: The last day of your section's demos/presentations, Thursday Jun 18th at 6pm ET
+* Poster/flier: The last day of your section's demos/presentations, Thursday Jun 18th at 6pm ET
 * Copy of Presentation/Demo: The last day of your section's demos/presentations, Thursday Jun 18th at 6pm ET 
 * Individual Reflection: The last day of your section's demos/presentations, Thursday Jun 18th at 6pm ET
 

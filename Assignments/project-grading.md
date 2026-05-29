@@ -29,7 +29,7 @@ From [Project Overview]({{ site.baseurl }}{% link Assignments/project-overview.m
   * 10% Test suite of your features.
 * Reports (20%)
   * 10% Final Report
-  * 10% Poster/Flier and Demo
+  * 10% Poster/flier and Demo
 * Individual Reflection (required to receive an 'A')
 
 This adds up to 100%; this sum is worth 40% of the course grade.
@@ -141,10 +141,10 @@ The allocation of the 10% credit will be as follows: Overview and manual will be
 * It provides a summary of what was planned to happen in each sprint vs what actually happened, with a discussion of what was revised as a result. 
 * The document is at most 2 pages (fewer pages are absolutely acceptable, consider this a rough limit) 
 
-## Posters/Fliers and Demo (10%)
-Each team is **required** to submit a poster or Flier. Details can be found on [Project Deliverables]({{ site.baseurl }}{% link Assignments/project-deliverable.md %}) page. 
+## Posters/fliers and Demo (10%)
+Each team is **required** to submit a poster or flier. Details can be found on [Project Deliverables]({{ site.baseurl }}{% link Assignments/project-deliverable.md %}) page. 
 
-In addition, some sections may have a demo (live in-person, via zoom or by recorded video). Each instructor has provided details regarding expectations for the demo and/or presentation below. The schedule and manner of these demos might also vary from section to section. The specifications for the different sections are listed below:
+In addition, some sections may have a demo (live in-person). Each instructor has provided details regarding expectations for the demo and/or presentation below. The schedule and manner of these demos might also vary from section to section. The specifications for the different sections are listed below:
 * [Section 1 - Prof. Bhutta]({{ site.baseurl }}{% link Assignments/demo-sec1.md %})
 
 Select projects may be hosted in our project showcase. Here are selected projects from the [Summer 2025 project showcase](https://neu-se.github.io/CS4530-Summer-2025/showcase/), and [Spring 2026 project showcase](https://neu-se.github.io/CS4530-Spring-2026/assignments/project-showcase).
