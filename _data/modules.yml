@@ -38,17 +38,17 @@ mod10:
   name: Tests with Larger Scope
   page: /modules/10-larger-tests
 mod11:
-  name: Application Level Patterns
-  page: 
+  name: Interaction & Application Level Patterns
+  page: /modules/11-patterns
 mod12:
   name: Continuous Development
-  page: 
+  page: /modules/12-continuous-development
 mod13:
   name: Principles for Cloud Deployment
-  page: 
+  page: /modules/13-cloud-infrastructure
 mod14:
   name: Security
-  page: 
+  page: /modules/14-security
 mod15:
   name: Ethics and Equity in SE
   page: /modules/15-ethics
@@ -117,7 +117,7 @@ tp3:
 tp4:
   name: Project Final Deliverable
   type: deadline
-  page: 
+  page: /assignments/project-deliverable
 tp5:
   name: Individual Reflection
   type: deadline
