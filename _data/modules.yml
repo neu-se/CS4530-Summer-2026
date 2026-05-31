@@ -57,9 +57,10 @@ ai:
   page: 
 advanced:
   name: Advanced Topics in SE
+  page: 
 opensource:
   name: Open Source
-  page: 
+  page: /modules/16-open-source
 dependency:
   name: Dependency Management
   page: 
