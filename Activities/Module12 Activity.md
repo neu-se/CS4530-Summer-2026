@@ -14,6 +14,10 @@ Only one member of each team needs to complete these steps, as the resulting dep
 {: .note }
 In this activity, we will focus on building a continuous deployment pipeline, but what about continuous integration? There are many ways to use continuous integration in your projects. For example, you can use GitHub Actions to automatically run tests after pushing a commit. GameNite has a continuous integration setup for running tests, and you can find the workflow in `.github/workflows/main.yml`.
 
+## Changelog
+
+2026-06-02: If your GitHub Actions checks hang during `Install Playwright Dependencies`, update Playwright from `1.58.1` to `1.60.0` in `client/package.json` and rerun the workflow.
+
 ## Pre-Requisites
 
 There are three pre-requisites for this activity.
